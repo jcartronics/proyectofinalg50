@@ -1,0 +1,244 @@
+# Registro de Usuarios
+# POST /api/v1/register
+
+request:
+    payload: {
+        name: String,
+        email: String,
+        username: String,
+        dateOfBirth: String,
+        password: String
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Iniciar Sesión
+# POST /api/v1/login
+
+request:
+    payload: {
+        login: String,
+        password: String
+    };
+    response: {
+        ok: Boolean,
+        token: String,
+    };
+
+# Editar Usuario
+# PUT /api/v1/user
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    payload: {
+        name: String,
+        username: String,
+        password: String
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Añadir dirección usuario
+# GET /api/v1/region
+
+request:
+    response: {
+        ok: Boolean,
+        region: []
+    };
+
+# GET /api/v1/commune
+
+request:
+    response: {
+        ok: Boolean,
+        commune: []
+    };
+
+# POST /api/v1/user/address
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    body: {
+        address: String,
+        idCommune: Number
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Obtener productos con filtrado, paginación y ordenamiento
+# GET /api/v1/products
+
+request:
+    queries: {
+        sort?: String,
+        limit?: Number,
+        page?: Number,
+        category: Number,
+        brand: Number
+    };
+    response: {
+        ok: Boolean,
+        products: []
+    };
+
+# Obtener detalle de producto
+# GET /api/v1/products/:id
+
+request:
+    params: {
+        id: Number
+    };
+    response: {
+        ok: Boolean,
+        product: {}
+    };
+
+# Agregar un nuevo producto
+# POST /api/v1/products
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    payload: {
+        name: String,
+        image: String,
+        description: String,
+        price: Number,
+        stock: Number,
+        brand: Number,
+        category: Number
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Editar un producto
+# PUT /api/v1/products/:id
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    payload: {
+        name: String,
+        image: String,
+        description: String,
+        price: Number,
+        stock: Number,
+        brand: Number,
+        category: Number
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Agregar un producto a favoritos
+# POST /api/v1/user/favorites
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    body: {
+        product: Number
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Obtener productos favoritos
+# GET /api/v1/user/favorites
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    response: {
+        products: []
+    };
+
+# Carro de compras - detalle
+# POST /api/v1/user/cart
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    response: {
+        ok: Boolean,
+        cart_detail: []
+    };
+
+# Pasarela de pago
+# POST /api/v1/user/purchase
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    body: {
+        idAddress: Number,
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Agregar el detalle de la compra
+# POST /api/v1/user/cartdetail
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    payload: {
+        product_id: Number,
+        quantity: Number
+    };
+    response: {
+        ok: Boolean,
+        message: String
+    };
+
+# Historial de compras
+# GET /api/v1/user/allcarts
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    response: {
+        ok: Boolean,
+        carts: []
+    };
+
+# Obtener detalle de una compra
+# GET /api/v1/user/cart/:id
+
+request:
+    header: {
+        Authorization: Bearer token;
+    };
+    params: {
+        id: Number
+    };
+    response: {
+        ok: Boolean,
+        cart: {},
+        cart_detail: []
+    };
