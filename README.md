@@ -6,7 +6,7 @@ Consiste en la construcción de una aplicación WEB con temática de una tienda 
 
 El proyecto Marketplace está dividido en 5 hitos.
 
-### Hito 1
+### Hito 1 ✅
 
 - Diseño de la interfaz gráfica. ✅
 - Definición de la navegación entre las vistas. ✅
