@@ -13,6 +13,14 @@ El proyecto Marketplace está dividido en 5 hitos.
 - Listado de dependencias a utilizar en el proyecto. ✅
 - Diseño las tablas de la base de datos y sus relaciones. ✅
 - Diseñar el contrato de datos de la API REST. ✅
+  
+### Hito 2
+
+- Crear un nuevo proyecto con las dependencias acorde al diseño y temática definida en el hito anterior.
+- Usar los componentes para la reutilización de código y separación de secciones integrando los hooks necesarios que correspondan.
+- Usar React Router para la navegación de vistas por rutas.
+- Utilizar Context API para el manejo de estado global.
+- Preparar la aplicación para el consumo de datos siguiendo el contrato definido en el hito anterior.
 
 ## Visuales
 
