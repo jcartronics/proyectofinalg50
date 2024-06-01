@@ -1,4 +1,6 @@
 import { useRoutes, BrowserRouter } from 'react-router-dom'
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
 // Paginas
@@ -13,6 +15,9 @@ import Login from './pages/Login'
 import Productos from './pages/Productos'
 import Registro from './pages/Registro'
 import NotFound from './pages/NotFound'
+
+// Componentes
+import Navbar from './components/Navbar'
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -35,6 +40,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <AppRoutes />
     </BrowserRouter>
   )
