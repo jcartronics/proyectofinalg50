@@ -17,6 +17,7 @@ import NotFound from './pages/NotFound'
 
 // Componentes
 import Navbar from './components/Navbar'
+import Footer from './components/Footer';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -42,6 +43,8 @@ const App = () => {
     <BrowserRouter>
       <Navbar />
       <AppRoutes />
+      <Footer />
+
     </BrowserRouter>
   )
 }
