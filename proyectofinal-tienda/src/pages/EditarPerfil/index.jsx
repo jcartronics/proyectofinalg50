@@ -1,7 +1,8 @@
+import Layout from "../../components/Layout"
 
 export const EditarPerfil = () => {
     return (
-      <div>Soy la página EditarPerfil</div>
+      <Layout>Soy la página EditarPerfil</Layout>
     )
   }
   

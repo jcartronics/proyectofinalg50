@@ -1,7 +1,8 @@
+import Layout from "../../components/Layout"
 
 export const AgregarProducto = () => {
     return (
-      <div>Soy la página AgregarProducto</div>
+      <Layout>Soy la página AgregarProducto</Layout>
     )
   }
   

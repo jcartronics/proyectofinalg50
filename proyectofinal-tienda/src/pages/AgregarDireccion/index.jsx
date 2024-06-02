@@ -1,7 +1,8 @@
+import Layout from "../../components/Layout"
 
 export const AgregarDireccion = () => {
     return (
-      <div>Soy la página AgregarDirección</div>
+      <Layout>Soy la página AgregarDirección</Layout>
     )
   }
   

@@ -1,7 +1,8 @@
+import Layout from "../../components/Layout"
 
 export const Favoritos = () => {
     return (
-      <div>Soy la página Favoritos</div>
+      <Layout>Soy la página Favoritos</Layout>
     )
   }
   

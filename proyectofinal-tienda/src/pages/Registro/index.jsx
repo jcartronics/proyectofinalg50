@@ -1,7 +1,8 @@
+import Layout from "../../components/Layout"
 
 export const Registro = () => {
     return (
-      <div>Soy la página Registro</div>
+      <Layout>Soy la página Registro</Layout>
     )
   }
   

@@ -1,7 +1,8 @@
+import Layout from "../../components/Layout"
 
 export const NotFound = () => {
     return (
-      <div>Soy la página NotFound</div>
+      <Layout>Soy la página NotFound</Layout>
     )
   }
   
