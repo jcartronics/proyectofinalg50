@@ -21,6 +21,7 @@ import Navbar from './components/Navbar'
 const AppRoutes = () => {
   let routes = useRoutes([
     { path: '/', element: <Home /> },
+    { path: '/home', element: <Home /> },
     { path: '/agregar-direccion', element: <AgregarDireccion /> },
     { path: '/agregar-producto', element: <AgregarProducto /> },
     { path: '/carrito', element: <Carrito /> },
