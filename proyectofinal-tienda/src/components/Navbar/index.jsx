@@ -4,31 +4,28 @@ import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 
 export const CustomNavbar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand as={NavLink} to={"/home"}>TronicStore</Navbar.Brand>
+    <Navbar expand="lg" className="bg-body-tertiary navbar_layout">
+      <Container className='navbar_container'>
+        <div className='navbar_brand'>
+          <Navbar.Brand as={NavLink} to={"/home"}>TronicStore</Navbar.Brand>
+        </div>
+        <div className='navbar_content'>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to={"/home"}>Home</Nav.Link>
-            <Nav.Link as={NavLink} to={"/login"}>Login</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={NavLink} to={"/registro"}>
+              <Button variant="primary">Registro</Button>
+            </Nav.Link>
+            <Nav.Link as={NavLink} to={"/login"}>
+              <Button variant="primary">Ingresar</Button>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
   )
